@@ -15,7 +15,7 @@ interface Props {
 
 function CounterTasksCompleted(arrayTasks: TasksSchema[]) {
     const totalTasksCompleted = arrayTasks.filter(task => task.isComplete).length;
-    return totalTasksCompleted > 0 ? totalTasksCompleted : 0;
+    return totalTasksCompleted;
 }
 
 

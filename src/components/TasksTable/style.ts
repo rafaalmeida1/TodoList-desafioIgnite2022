@@ -80,12 +80,12 @@ export const TasksEmpty = styled.div<TasksActive>`
 
     h2{
         color: var(--gray-300);
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     p{
         color: var(--gray-300);
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
 `
