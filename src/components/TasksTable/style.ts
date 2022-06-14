@@ -90,7 +90,7 @@ export const TasksEmpty = styled.div<TasksActive>`
     
 `
 
-export const Tasks = styled.ul<TasksActive>`
+export const TasksContent = styled.ul<TasksActive>`
     display: ${(props) => props.isActive ? 'flex' : 'none'};
     flex-direction: column;
     align-items: center;

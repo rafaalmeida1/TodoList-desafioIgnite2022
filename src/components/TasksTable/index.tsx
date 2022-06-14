@@ -1,4 +1,4 @@
-import { Container, Content, TasksCreateCounter, TasksCompleteCounter, TasksEmpty, Tasks } from './style';
+import { Container, Content, TasksCreateCounter, TasksCompleteCounter, TasksEmpty, TasksContent } from './style';
 import clipboardImg from '../../assets/Clipboard.svg'
 
 interface TasksSchema {
@@ -7,7 +7,7 @@ interface TasksSchema {
     isComplete: boolean;
 }
 
-interface Props {
+interface TasksProps {
     arrayTasks: TasksSchema[];
     handleToggleTaskCompletion: (id: number) => void;
     handleRemoveTask: (id: number) => void;
@@ -19,7 +19,7 @@ function CounterTasksCompleted(arrayTasks: TasksSchema[]) {
 }
 
 
-export function TasksTable({arrayTasks, handleToggleTaskCompletion, handleRemoveTask}: Props){
+export function TasksTable({arrayTasks, handleToggleTaskCompletion, handleRemoveTask}: TasksProps){
     return(
         <Container>
             <Content>
@@ -40,7 +40,7 @@ export function TasksTable({arrayTasks, handleToggleTaskCompletion, handleRemove
                 <p>Crie tarefas e organize seus itens a fazer</p>
             </TasksEmpty>
 
-            <Tasks isActive={arrayTasks.length > 0}>
+            <TasksContent isActive={arrayTasks.length > 0}>
                 {arrayTasks.map(task => (
                     <li key={task.id} className={task.isComplete ? 'completed' : ''}>
                          <label>
@@ -61,7 +61,7 @@ export function TasksTable({arrayTasks, handleToggleTaskCompletion, handleRemove
                         </button>
                     </li>
                 ))}
-            </Tasks>
+            </TasksContent>
 
         </Container>
     )
