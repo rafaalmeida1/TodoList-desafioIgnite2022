@@ -78,19 +78,15 @@ export const TasksEmpty = styled.div<TasksActive>`
         margin-bottom: 1rem;
     }
 
-    h2{
+    h2, p{
         color: var(--gray-300);
         font-size: 1rem;
-    }
-    
-    p{
-        color: var(--gray-300);
-        font-size: 1rem;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
     
 `
 
-export const TasksContent = styled.ul<TasksActive>`
+export const Tasks = styled.ul<TasksActive>`
     display: ${(props) => props.isActive ? 'flex' : 'none'};
     flex-direction: column;
     align-items: center;
@@ -107,7 +103,7 @@ export const TasksContent = styled.ul<TasksActive>`
         justify-content: space-between;
         
         background: var(--gray-500);
-        color: var(--gray-100);
+        color: var(--gray-200);
         border-radius: 0.5rem;
         border: 1px solid var(--gray-400);
 
