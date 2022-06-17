@@ -178,15 +178,17 @@ export const Tasks = styled.ul<TasksActive>`
         button{
             background: none;
             border: none;
-
+            color: var(--gray-300);
             transition: all 0.2s;
+            padding: 0.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             &:hover{
                 background: var(--gray-400);
-                
-                & > svg > path{
-                    fill: var(--danger);
-                }
+                color: var(--danger);
+                border-radius: 4px;
             }
         }
     }
