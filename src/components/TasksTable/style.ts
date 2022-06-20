@@ -176,14 +176,12 @@ export const Tasks = styled.ul<TasksActive>`
         }
 
         button{
-            background: none;
+            background: transparent;
             border: none;
             color: var(--gray-300);
             transition: all 0.2s;
             padding: 0.3rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            line-height: 0;
 
             &:hover{
                 background: var(--gray-400);

@@ -61,7 +61,7 @@ function TasksContent({arrayTasks, handleToggleTaskCompletion, handleRemoveTask}
                     </label>
                     <p>{task.title}</p>
                     <button type="button" onClick={() => handleRemoveTask(task.id)}>
-                        <Trash size={20}/>
+                        <Trash size={24}/>
                     </button>
                 </li>
             ))}

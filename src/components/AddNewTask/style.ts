@@ -47,6 +47,10 @@ export const Container = styled.div`
         border-radius: 6px;
         border: none;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
 
         transition: background 0.2s;
 
@@ -54,13 +58,9 @@ export const Container = styled.div`
             background: var(--blue);
         }
 
-        img{
-            vertical-align: middle;
-        }
 
         span {
             margin-right: 0.5rem;
-            display: inline;
         }
 
         @media(max-width: 768px){
