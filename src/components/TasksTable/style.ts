@@ -78,10 +78,24 @@ export const TasksEmpty = styled.div<TasksActive>`
         margin-bottom: 1rem;
     }
 
-    h2, p{
+    h2, p, span{
         color: var(--gray-300);
         font-size: 1rem;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    span {
+        margin-top: 0.5rem;
+    }
+
+    span > a {
+        text-decoration: none;
+        color: var(--blue);
+        transition: filter 0.2s;
+    }
+
+    span > a:hover{
+        filter: brightness(0.8);
     }
     
 `

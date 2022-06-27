@@ -39,6 +39,7 @@ export function TasksTable({arrayTasks, handleToggleTaskCompletion, handleRemove
                 <img src={clipboardImg} alt="Clipboard" />
                 <h2>Você ainda não tem tarefas cadastradas</h2>    
                 <p>Crie tarefas e organize seus itens a fazer</p>
+                <span>Feito por<a href="https://github.com/rafaalmeida1" target="_blank"> Rafael Almeida</a></span>
             </TasksEmpty>
 
             <TasksContent arrayTasks={arrayTasks} handleToggleTaskCompletion={handleToggleTaskCompletion} handleRemoveTask={handleRemoveTask}/>
