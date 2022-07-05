@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.form`
     display: flex;
     justify-content: center;
     align-content: center;
@@ -54,14 +54,20 @@ export const Container = styled.div`
 
         transition: background 0.2s;
 
-        &:hover{
+        &:hover:not(:disabled) {
             background: var(--blue);
         }
 
+        &:disabled {
+            background: var(--gray-500);
+            color: var(--gray-100);
+            cursor: not-allowed;
+        }
 
         span {
             margin-right: 0.5rem;
         }
+
 
         @media(max-width: 768px){
             width: 100%;

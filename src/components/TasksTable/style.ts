@@ -124,6 +124,8 @@ export const Tasks = styled.ul<TasksActive>`
         padding: 1rem;
         margin-bottom: 0.7rem;
 
+        transition: opacity 0.2s;
+
         &.completed {
             p{
                 text-decoration: line-through;

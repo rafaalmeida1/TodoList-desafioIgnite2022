@@ -21,6 +21,7 @@ function CounterTasksCompleted(arrayTasks: TasksSchema[]) {
 
 
 export function TasksTable({arrayTasks, handleToggleTaskCompletion, handleRemoveTask}: TasksProps){
+
     return(
         <Container>
             <Content>

@@ -1,16 +1,17 @@
 import { Container} from './style';
 import plusImg from '../../assets/plus.svg'
+import { ChangeEvent, useState } from 'react';
 
 interface AddNewTaskProps {
     newTaskTitle: string;
     setNewTaskTitle: (title: string) => void;
-    createNewTask: () => void;
+    createNewTask: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
 export function AddNewTask({newTaskTitle, setNewTaskTitle, createNewTask}: AddNewTaskProps) {
 
     return(
-        <Container>
+        <Container onSubmit={createNewTask}>
                 <input
                     type="text"
                     placeholder="Adicione uma nova tarefa"
@@ -19,7 +20,7 @@ export function AddNewTask({newTaskTitle, setNewTaskTitle, createNewTask}: AddNe
                 />
                 <button 
                     type="submit"
-                    onClick={createNewTask}    
+                    disabled={newTaskTitle === ''}
                 >
                     <span>Criar</span>
                     <img src={plusImg} alt="Botão de criar tarefa"/>

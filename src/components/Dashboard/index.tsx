@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import { AddNewTask } from '../AddNewTask';
 import { TasksTable } from '../TasksTable';
 
@@ -14,7 +14,9 @@ export function Dashboard() {
     const [tasks, setTasks] = useState<Task[]>([]);
     const [newTaskTitle, setNewTaskTitle] = useState('');
 
-    function handleCreateNewTask(){
+    function handleCreateNewTask(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+
         if(newTaskTitle === ''){
             return;
         }
